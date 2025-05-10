@@ -3,6 +3,7 @@ public class GetEmp{
    String name;
    String email;
    String empID;
+   public accessHierarchy access;
    
   
 
@@ -11,8 +12,14 @@ public class GetEmp{
         setEmail(email);
         this.empID = empID;
         this.name = name;
+        this.access= new accessHierarchy(this);
         
     }
+
+    @Override
+    public String toString() {
+    return "Name: " + name + "\nEmail: " + email + "\nEmpID: " + empID;
+}
 
     public String getName() {
         return name;

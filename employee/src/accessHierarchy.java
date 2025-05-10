@@ -3,39 +3,32 @@ public class accessHierarchy {
     private boolean junior = false;
     private boolean intern = false;
 
-	//note: only do if you understand
-}
-//     public accessHierarchy(GetEmp emp) {
-//         String empID = emp.getEmpID();
-//         if (empID.length() < 3) {
-//             System.out.println("Invalid empID for access level check.");
-//             return;
-//         }
+        public accessHierarchy(GetEmp emp){ //Constructor: Special method that initializes objects. Same name as class
+            String ID= emp.empID;//uska object banaya as emp is from same class aur firr usse empID ko call kiye attibute
 
-//         // Extract last 3 characters
-//         String lastThree = empID.substring(empID.length() - 3);
+            if(ID.length()>=3){
+                String lastThree = ID.substring(ID.length() - 3); //eturns a string that is a substring of this string. The substring begins with the character at the specified index and extends to the end of this string.
+                                                                //Examples:
+                                                                //"unhappy".substring(2) returns "happy"
+                int code=Integer.parseInt(lastThree);
+                if(code>=700)
+                    senior=true;
+                
+                else if(code>=500||code<700)
+                    junior=true;
+                    
+                else
+                    intern=true;
+            }
 
-//         try {
-//             int code = Integer.parseInt(lastThree);
+        }
+        public void accessDisplay(){
+            if(senior)
+                System.out.println("Senior Access");
+            else if(junior)
+                System.out.println("Junior Access");
+             else if(intern)
+                System.out.println("Junior Access");
+        }
 
-//             if (code >= 700 && code <= 999) {
-//                 senior = true;
-//             } else if (code >= 300 && code <= 699) {
-//                 junior = true;
-//             } else {
-//                 intern = true;
-//             }
-//         } catch (NumberFormatException e) {
-//             System.out.println("empID does not end with numeric digits.");
-//         }
-//     }
-
-//     public void displayAccess() {
-//         System.out.println("Access Level:");
-//         if (senior) System.out.println("Senior");
-//         if (junior) System.out.println("Junior");
-//         if (intern) System.out.println("Intern");
-//     }
-
-//     // Optionally, you could add getters if needed
-// }
+	}
