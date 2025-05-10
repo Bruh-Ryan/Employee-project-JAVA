@@ -52,16 +52,24 @@ public class App {
                 break;
                 
                 case 4:
-                    System.out.print("need your details, ID! \n::::::::\n ");
-                    String deleteCheck=scan.next();
-                    GetEmp deleteResult=checkerID.sendCheck(deleteCheck);
-                            if (deleteResult == null) {
-                            throw new NullPointerException("Cannot delete. No employee found with ID: " + deleteCheck);
-                    }
-                    System.out.println(deleteResult+"\n--------is deleted----------");
-                    App.dbms.remove(deleteResult);
+                    try {
+                        System.out.print("need your details, ID! \n::::::::\n ");
+                        String deleteCheck = scan.next();
+                        GetEmp deleteResult = checkerID.sendCheck(deleteCheck);
 
+                        if (deleteResult == null) {
+                            throw new NullPointerException("Cannot delete. No employee found with ID: " + deleteCheck);
+                        } else {
+                            System.out.println(deleteResult + "\n--------is deleted----------");
+                            App.dbms.remove(deleteResult);
+                        }
+                    } catch (NullPointerException e) {
+                        System.out.println("An error occurred while deleting: " + e.getMessage());
+                    }
                     break;
+                    
+                 
+                    
                 case 5:
                     running=false;
                     break;
