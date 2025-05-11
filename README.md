@@ -50,11 +50,11 @@ ntern access
 *The search dialog prompts users to enter an employee ID (shown with 60420 entered). This feature demonstrates how to create input dialogs and implement search functionality across a data structure using object-oriented principles.*
 
 ### Email Input Validation
-![Email Input Validation](screenshot3.png)
+![Email Input Validation](ss1.png)
 *This input dialog captures email information with built-in validation. The system ensures emails end with "@gmail.com" through the validation logic implemented in the GetEmp class, showing the power of encapsulation and data validation.*
 
 ### Main Application Interface
-![Main Application Interface](screenshot4.png)
+![Main Application Interface](employee/Screenshots/ss2.png)
 *The main Swing interface features five clearly labeled buttons for different operations: Add Employee, Show Last Employee, Search by ID, Delete by ID, and Exit. This demonstrates the application of GridLayout and action listeners in Java Swing development.*
 
 ## Getting Started
