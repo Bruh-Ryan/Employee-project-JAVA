@@ -42,15 +42,15 @@ ntern access
 > **Note:** Make sure to save the screenshots in your repository as screenshot1.png, screenshot2.png, etc., or update the image paths below to match your file structure.
 
 ### Employee Information Display
-![Employee Information Display](screenshot1.png)
+![Employee Information Display](employee/Screenshots/ss3.jpg)
 *This dialog shows the employee record with name "ueiuar", email "ryayaya@gmail.com", and ID "60420". The dialog displays key employee information in a clean, organized format, demonstrating how to present data to users in a Swing application.*
 
 ### Search Employee by ID
-![Search Employee by ID](screenshot2.png)
+![Search Employee by ID](employee/Screenshots/ss4.png)
 *The search dialog prompts users to enter an employee ID (shown with 60420 entered). This feature demonstrates how to create input dialogs and implement search functionality across a data structure using object-oriented principles.*
 
 ### Email Input Validation
-![Email Input Validation](ss1.png)
+![Email Input Validation](employee/Screenshots/ss1.png)
 *This input dialog captures email information with built-in validation. The system ensures emails end with "@gmail.com" through the validation logic implemented in the GetEmp class, showing the power of encapsulation and data validation.*
 
 ### Main Application Interface
