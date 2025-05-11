@@ -1,3 +1,4 @@
+import javax.swing.JOptionPane;
 public class accessHierarchy {
     private boolean senior = false;
     private boolean junior = false;
@@ -24,11 +25,11 @@ public class accessHierarchy {
         }
         public void accessDisplay(){
             if(senior)
-                System.out.println("Senior Access");
+                JOptionPane.showMessageDialog(null, "Employee Access\n Senior"); //for the gui can be changed for simple CUI by simple return
             else if(junior)
-                System.out.println("Junior Access");
+                JOptionPane.showMessageDialog(null, "Employee Access\n Junior" );
              else if(intern)
-                System.out.println("Junior Access");
+                JOptionPane.showMessageDialog(null, "Employee Access\n Intern");
         }
 
 	}
